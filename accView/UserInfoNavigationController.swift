@@ -13,6 +13,7 @@ class UserInfoNavigationController : UINavigationController {
     var needLogVC: UIViewController?;
     let user = Context.currentUser
     
+ 
     required init?(coder aDecoder: NSCoder) {
         alreadyLogVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loggedin_vc")
         needLogVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "login_vc")

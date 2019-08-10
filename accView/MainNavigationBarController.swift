@@ -9,5 +9,9 @@
 import UIKit
 
 class MainNavigationBarController: UITabBarController {
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        Context.mainNav = self
+    }
     
 }

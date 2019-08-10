@@ -13,7 +13,7 @@
         <!--Boosting-->
         <scene sceneID="H3O-rY-KKP">
             <objects>
-                <viewController id="I48-7Q-Ng8" userLabel="Boosting" customClass="BoostingViewController" customModule="accView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="boosting_page" id="I48-7Q-Ng8" userLabel="Boosting" customClass="BoostingViewController" customModule="accView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5GR-Sj-gg8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -227,14 +227,60 @@
                     <view key="view" contentMode="scaleToFill" id="gtk-l3-9O0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="游戏列表:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgx-pt-VBN">
+                                <rect key="frame" x="49" y="94" width="77" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iFY-b0-5yA" userLabel="gameList">
+                                <rect key="frame" x="49" y="150" width="325" height="384"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UJn-f4-T0c">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GameListCell" id="wQC-l5-WCV" customClass="MyCollectionViewCell" customModule="accView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game/big/1" translatesAutoresizingMaskIntoConstraints="NO" id="NLn-Jl-Enx">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <size key="customSize" width="100" height="100"/>
+                                        <connections>
+                                            <outlet property="Pic" destination="NLn-Jl-Enx" id="wfR-ak-sSS"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="atU-Ne-QLb" id="EHI-CU-11w"/>
+                                    <outlet property="delegate" destination="atU-Ne-QLb" id="dhF-3c-KQ5"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gcL-TJ-nuD"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="jsH-DQ-XpQ" userLabel="game"/>
+                    <connections>
+                        <outlet property="gameList" destination="iFY-b0-5yA" id="pVv-KB-yJ4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rUh-EA-fFS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2143" y="-1465"/>
+            <point key="canvasLocation" x="-2143.4782608695655" y="-1465.1785714285713"/>
         </scene>
         <!--loggedin-->
         <scene sceneID="dg3-wB-Q3b">
@@ -359,7 +405,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="密    码：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evT-uE-5Zz">
                                         <rect key="frame" x="20" y="78" width="74" height="22"/>
@@ -380,7 +426,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                 </subviews>
                             </view>
@@ -416,12 +462,19 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginPress:" destination="f1R-vg-eIF" eventType="touchUpInside" id="gOP-Lw-eCW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.064494289457798004" green="0.84483081102371216" blue="0.076638348400592804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="0Fz-5w-fhd"/>
                     </view>
                     <navigationItem key="navigationItem" id="8YE-1p-E29"/>
+                    <connections>
+                        <outlet property="passInput" destination="E2J-Rm-oto" id="mAJ-ke-Irt"/>
+                        <outlet property="userNameInput" destination="MiL-bh-8n4" id="76y-YM-lh6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1xc-ab-xaK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -430,7 +483,7 @@
         <!--Main Navigation Bar Controller-->
         <scene sceneID="VVj-OQ-gys">
             <objects>
-                <tabBarController id="ArM-Cr-PqG" customClass="MainNavigationBarController" customModule="accView" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainNav" id="ArM-Cr-PqG" customClass="MainNavigationBarController" customModule="accView" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="N8Y-7h-hld">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
