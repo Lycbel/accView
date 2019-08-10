@@ -25,8 +25,10 @@ class UserInfoNavigationController : UINavigationController {
     
     // will only keep one VC in the stack
     private func showUserInfoDependOnUserState() {
+        self.popViewController(animated: false);
         if(!user.isLogedIn) {
             if (needLogVC != nil && self.topViewController != needLogVC ) {
+                print("show need log VC")
                 self.popViewController(animated: false);
                 self.show(needLogVC!, sender: self)
             }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1A7AD7B22FEA8D50041FBEF /* UnderLineText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A7AD7A22FEA8D50041FBEF /* UnderLineText.swift */; };
 		A1C5C35222FC4E7C0073B3BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5C35122FC4E7C0073B3BE /* AppDelegate.swift */; };
 		A1C5C35722FC4E7C0073B3BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1C5C35522FC4E7C0073B3BE /* Main.storyboard */; };
 		A1C5C35922FC4E800073B3BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1C5C35822FC4E800073B3BE /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A1A7AD7A22FEA8D50041FBEF /* UnderLineText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderLineText.swift; sourceTree = "<group>"; };
 		A1C5C34E22FC4E7C0073B3BE /* accView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = accView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C5C35122FC4E7C0073B3BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1C5C35622FC4E7C0073B3BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			children = (
 				A1C5C39E22FD9F1B0073B3BE /* MiddleCircle.swift */,
 				A1C5C3A022FDAA9F0073B3BE /* ButtonNew.swift */,
+				A1A7AD7A22FEA8D50041FBEF /* UnderLineText.swift */,
 			);
 			path = component;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1C5C38422FD1F0A0073B3BE /* GameListViewController.swift in Sources */,
+				A1A7AD7B22FEA8D50041FBEF /* UnderLineText.swift in Sources */,
 				A1C5C38822FD200B0073B3BE /* BoostingViewController.swift in Sources */,
 				A1C5C38222FD1D6C0073B3BE /* MainNavigationBarController.swift in Sources */,
 				A1C5C39822FD42140073B3BE /* Context.swift in Sources */,

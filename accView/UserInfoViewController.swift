@@ -10,7 +10,6 @@ import UIKit
 
 class UserInfoViewController: ViewController {
     override func viewDidLoad() {
-        Context.currentGame?.bigIcon = UIImage(named: "circles/c1")!;
         super.viewDidLoad();
     }
     
