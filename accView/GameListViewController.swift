@@ -51,6 +51,9 @@ class GameListViewController : ViewController, UICollectionViewDataSource, UICol
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print (indexPath.item)
         if (indexPath.item != 0) {
+            let alert = UIAlertController(title: "不支持",message: "该游戏暂不支持", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+            self.present(alert, animated: true)
             return;
         }
         // handle tap events

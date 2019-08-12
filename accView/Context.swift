@@ -15,6 +15,7 @@ class Context {
     static var _gameList: [Game] = [Game]()
     static var myGames: [Game] = [Game]()
     static var mainNav: UITabBarController?;
+    static var isBoosting = false;
     static var currentGame: Game! {
         get {
             return _currentGame

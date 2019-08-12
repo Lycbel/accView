@@ -11,8 +11,11 @@ import UIKit
 class UserInfoNavigationController : UINavigationController {
     var alreadyLogVC: UIViewController?;
     var needLogVC: UIViewController?;
-    let user = Context.currentUser
-    
+    var user: User {
+        get {
+            return Context.currentUser
+        }
+    }
  
     required init?(coder aDecoder: NSCoder) {
         alreadyLogVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loggedin_vc")
@@ -25,7 +28,7 @@ class UserInfoNavigationController : UINavigationController {
     }
     
     // will only keep one VC in the stack
-    private func showUserInfoDependOnUserState() {
+    func showUserInfoDependOnUserState() {
         self.popViewController(animated: false);
         if(!user.isLogedIn) {
             if (needLogVC != nil && self.topViewController != needLogVC ) {

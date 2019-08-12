@@ -29,6 +29,19 @@ class UserInfoViewController: ViewController,  UITextFieldDelegate {
         super.init(coder: aDecoder)
     }
     @IBAction func loginPress(_ sender: UIButton) {
+        let name = userNameInput?.text;
+        let pass = passInput?.text;
+        if (name == nil || pass == nil || name!.isEmpty || pass!.isEmpty) {
+            let alert = UIAlertController(title: "请输入密码或账号", message: "密码或账号不能为空", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+            self.present(alert, animated: true)
+        } else {
+            Context.currentUser = User();
+            let result = Context.currentUser.login(userName: name!, passWord: pass!)
+            if (result) {
+                ((self.navigationController as! UserInfoNavigationController)).showUserInfoDependOnUserState()
+            }
+        }
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
         
